@@ -9,7 +9,7 @@
             <h3>Listing # <a href="/posts/{{$post->id}}/edit">{{$post ->id}} - Breed : {{$post->breed}}</a></h3>-->
             <h3>Listing # {{$post ->id}} - Breed : {{$post->breed}}</h3>
                 <ul>
-                <li>Price : {{$post ->price}}</a></li>
+                <li>Price : {{$post ->price}}</li>
                 <li>Age (months) : {{$post->age}}</li>
                 <li>Name : {{$post->name}}</li>
                 </ul>
