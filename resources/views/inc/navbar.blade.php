@@ -23,6 +23,7 @@
             </ul>
 
             <ul class="nav navbar-nav">
+                <li><a href="/posts">View All</a></li>
                 <li><a href="/posts/create">List A Pet</a></li>
             </ul>
 
