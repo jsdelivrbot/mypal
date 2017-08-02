@@ -19,6 +19,7 @@ User can view all listing of pets without registration and to add/list a pet, re
 2) Download entire root and setup .env file according to database created
 3) With Administration mode on notepad edit C:\Windows\System32\drivers\etc and add 127.0.0.1 xxx.yy then save it.
 4) Edit C:\xampp\apache\conf\extra\httpd-vhosts.conf
+
         <VirtualHost *:80>
         DocumentRoot "C:/xampp/htdocs"
         ServerName localhost
@@ -28,6 +29,7 @@ User can view all listing of pets without registration and to add/list a pet, re
         DocumentRoot "C:/xampp/htdocs/xxx/public"
         ServerName xx.yy
         </VirtualHost>
+        
 5)Restart apache and view on browser
 
 ## Using on Cpanel
