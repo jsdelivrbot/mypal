@@ -7,44 +7,39 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## About MyPal
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+MyPal is a demo web application for user to list rescued pet for sale.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+User can view all listing of pets without registration and to add/list a pet, registration is required.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+## Using MyPal in PC
 
-## Learning Laravel
+1) Install and run XAMPP
+2) Download entire root and setup .env file according to database created
+3) With Administration mode on notepad edit C:\Windows\System32\drivers\etc and add 127.0.0.1 xxx.yy then save it.
+4) Edit C:\xampp\apache\conf\extra\httpd-vhosts.conf
+        <VirtualHost *:80>
+        DocumentRoot "C:/xampp/htdocs"
+        ServerName localhost
+        </VirtualHost>
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+        <VirtualHost *:80>
+        DocumentRoot "C:/xampp/htdocs/xxx/public"
+        ServerName xx.yy
+        </VirtualHost>
+5)Restart apache and view on browser
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+## Using on Cpanel
 
-## Laravel Sponsors
+1) SQL dump available at _SQL/mypal.sql
+2) Move mypal/* except public folder to your root path and move the mypal/public/* contents to your public folder.
+3) Modify mypal/public/index.php to the correct bootstrap path
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+    require __DIR__.'/../bootstrap/autoload.php';
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
+    $app = require_once __DIR__.'/../bootstrap/app.php';
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
 
 ## License
 
