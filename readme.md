@@ -29,8 +29,8 @@ User can view all listing of pets without registration and to add/list a pet, re
         DocumentRoot "C:/xampp/htdocs/xxx/public"
         ServerName xx.yy
         </VirtualHost>
-        
-5)Restart apache and view on browser
+
+5) Restart apache and view on browser
 
 ## Using on Cpanel
 
